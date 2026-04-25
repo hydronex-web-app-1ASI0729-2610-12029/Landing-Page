@@ -105,7 +105,43 @@ body.lang-es li[data-lang="en"] {
 /* ===================================
    SECCIONES - HEADERS
    =================================== */
+.section-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--celeste);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
+}
 
+.section-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--gris-oscuro);
+    text-align: center;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: var(--gris-medio);
+    text-align: center;
+    line-height: 1.65;
+    max-width: 620px;
+    margin: 0 auto 48px;
+}
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.highlight {
+    color: var(--celeste);
+}
 /* ===================================
    NAVBAR
    =================================== */

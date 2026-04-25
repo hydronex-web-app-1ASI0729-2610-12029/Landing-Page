@@ -126,6 +126,93 @@ body.lang-es li[data-lang="en"] {
    BENEFICIOS
    =================================== */
 
+.beneficios {
+    background: var(--gris-claro);
+    padding: 80px 0;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.beneficio-card {
+    background: var(--blanco);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s ease;
+}
+
+.beneficio-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.beneficio-header {
+    padding: 20px 26px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.card-admin .beneficio-header {
+    background: var(--gris-oscuro);
+}
+
+.card-owner .beneficio-header {
+    background: var(--celeste);
+}
+
+.card-admin .beneficio-header i {
+    color: var(--celeste);
+    font-size: 24px;
+}
+
+.card-owner .beneficio-header i {
+    color: var(--blanco);
+    font-size: 24px;
+}
+
+.beneficio-header h3 {
+    color: var(--blanco);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.beneficio-body {
+    padding: 24px 26px;
+}
+
+.beneficio-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.beneficio-item .fa-check-circle {
+    color: var(--verde);
+    font-size: 17px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.beneficio-item p {
+    font-size: 14px;
+    color: var(--gris-oscuro);
+    line-height: 1.55;
+}
+
+.beneficio-cta {
+    padding: 6px 26px 26px;
+}
+
+.beneficio-cta .btn {
+    width: 100%;
+    justify-content: center;
+}
+
 /* ===================================
    AHORRO
    =================================== */

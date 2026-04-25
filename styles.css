@@ -253,6 +253,70 @@ body.lang-es li[data-lang="en"] {
 /* ===================================
    AHORRO
    =================================== */
+.ahorro {
+    background: linear-gradient(135deg, var(--gris-oscuro) 0%, #1a2a35 100%);
+    padding: 80px 0;
+}
+
+.ahorro .section-eyebrow.eyebrow-light {
+    color: var(--celeste);
+}
+
+.ahorro .section-title.title-light {
+    color: var(--blanco);
+}
+
+.ahorro .section-subtitle.subtitle-light {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ahorro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 36px;
+}
+
+.ahorro-box {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius);
+    padding: 26px 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.ahorro-box:hover {
+    transform: translateY(-3px);
+}
+
+.ahorro-highlight {
+    background: rgba(41, 171, 226, 0.15);
+    border-color: var(--celeste);
+}
+
+.ahorro-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--blanco);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.highlight-number {
+    color: var(--celeste);
+}
+
+.ahorro-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.55;
+}
+
+.ahorro-cta {
+    text-align: center;
+}
 
 /* ===================================
    PLANES

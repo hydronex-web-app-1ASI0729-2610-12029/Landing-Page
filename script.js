@@ -42,7 +42,23 @@ function initLanguageSystem() {
     if (btn) btn.addEventListener('click', switchLanguage);
 }
 // NAVBAR MÓVIL (HAMBURGUESA)
+function initMobileMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('navMenu');
+    if (!hamburger || !navMenu) return;
 
+    hamburger.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        hamburger.classList.toggle('active', isOpen);
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+            hamburger.classList.remove('active');
+        });
+    });
+}
 // SCROLL SUAVE
 
 // EFECTO NAVBAR AL HACER SCROLL

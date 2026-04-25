@@ -32,6 +32,19 @@ function initScrollAnimations() {
 }
 
 // EFECTO 3D EN TARJETAS
+function init3DCards() {
+    document.querySelectorAll('.plan-card, .problema-card, .step-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r  = card.getBoundingClientRect();
+            const rx = ((e.clientY - r.top)  - r.height / 2) / 14;
+            const ry = (r.width / 2 - (e.clientX - r.left)) / 14;
+            card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(6px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+}
 
 // FORMULARIO DE CONTACTO
 

@@ -166,6 +166,12 @@ body.lang-es li[data-lang="en"] {
 /* ===================================
    RESPONSIVE - TABLET
    =================================== */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
 
 /* ===================================
    RESPONSIVE - MOBILE

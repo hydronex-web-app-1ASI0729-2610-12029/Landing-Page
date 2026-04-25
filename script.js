@@ -9,6 +9,27 @@
 // EFECTO NAVBAR AL HACER SCROLL
 
 // ANIMACIONES FADE-IN AL HACER SCROLL
+function isVisible(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight * 0.88 && rect.bottom >= 0;
+}
+
+function initScrollAnimations() {
+    const targets = document.querySelectorAll(
+        '.problema-card, .step-card, .beneficio-card, .ahorro-box, .plan-card, .team-card, .section-header'
+    );
+
+    targets.forEach(el => el.classList.add('fade-in'));
+
+    function check() {
+        targets.forEach(el => {
+            if (isVisible(el)) el.classList.add('visible');
+        });
+    }
+
+    window.addEventListener('scroll', throttle(check, 80));
+    check();
+}
 
 // EFECTO 3D EN TARJETAS
 

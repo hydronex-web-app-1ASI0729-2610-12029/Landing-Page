@@ -256,6 +256,36 @@ body.lang-es li[data-lang="en"] {
 /* ===================================
    TOAST NOTIFICATION
    =================================== */
+.toast {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: var(--gris-oscuro);
+    color: var(--blanco);
+    padding: 14px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: var(--shadow-lg);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    max-width: 340px;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast.success { border-left: 4px solid var(--verde); }
+.toast.error   { border-left: 4px solid var(--rojo); }
+.toast.info    { border-left: 4px solid var(--celeste); }
+
 
 /* ===================================
    ANIMACIONES SCROLL

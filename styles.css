@@ -158,6 +158,11 @@ body.lang-es li[data-lang="en"] {
     transform 0.55s ease;
 }
 
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ===================================
    RESPONSIVE - TABLET
    =================================== */

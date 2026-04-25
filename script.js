@@ -56,8 +56,55 @@ function initContactForm() {
 }
 
 // NEWSLETTER
+function initNewsletter() {
+    const btn   = document.querySelector('.newsletter-btn');
+    const input = document.querySelector('.newsletter-input');
+    if (!btn || !input) return;
+
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        const email = input.value.trim();
+
+        if (!email || !validEmail(email)) {
+            showToast(
+                currentLanguage === 'es'
+                    ? 'Por favor, ingresa un email válido.'
+                    : 'Please enter a valid email address.',
+                'error'
+            );
+            return;
+        }
+
+        showToast(
+            currentLanguage === 'es'
+                ? '¡Gracias por suscribirte!'
+                : 'Thanks for subscribing!',
+            'success'
+        );
+        input.value = '';
+    });
+}
+
 
 // BOTONES DE PLANES
+
+function initPricingButtons() {
+    document.querySelectorAll('.plan-btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+            const href = btn.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                smoothScrollTo(href);
+                showToast(
+                    currentLanguage === 'es'
+                        ? '¡Perfecto! Cuéntanos sobre tu edificio.'
+                        : 'Great! Tell us about your building.',
+                    'success'
+                );
+            }
+        });
+    });
+}
 
 // TOAST NOTIFICATIONS
 

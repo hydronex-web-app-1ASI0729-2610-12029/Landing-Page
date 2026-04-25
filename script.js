@@ -1,7 +1,46 @@
 // TANKIQ — script.js
 
 // SISTEMA DE IDIOMAS
+let currentLanguage = 'en';
 
+function applyLanguage(lang) {
+    currentLanguage = lang;
+
+    if (lang === 'es') {
+        document.body.classList.add('lang-es');
+    } else {
+        document.body.classList.remove('lang-es');
+    }
+
+    document.querySelectorAll('[data-placeholder-es]').forEach(el => {
+        if (lang === 'es') {
+            el.placeholder = el.getAttribute('data-placeholder-es');
+        } else {
+            const type = el.type || '';
+            const tag  = el.tagName.toLowerCase();
+            if (type === 'text')         el.placeholder = 'Enter your full name';
+            else if (type === 'email' && el.classList.contains('newsletter-input'))
+                                         el.placeholder = 'your@email.com';
+            else if (type === 'email')   el.placeholder = 'Enter your email';
+            else if (type === 'tel')     el.placeholder = 'Phone number';
+            else if (tag === 'textarea') el.placeholder = 'Tell us about your building...';
+        }
+    });
+
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+function switchLanguage() {
+    applyLanguage(currentLanguage === 'en' ? 'es' : 'en');
+}
+
+function initLanguageSystem() {
+    const saved = localStorage.getItem('preferredLanguage') || 'en';
+    applyLanguage(saved);
+
+    const btn = document.getElementById('languageBtn');
+    if (btn) btn.addEventListener('click', switchLanguage);
+}
 // NAVBAR MÓVIL (HAMBURGUESA)
 
 // SCROLL SUAVE

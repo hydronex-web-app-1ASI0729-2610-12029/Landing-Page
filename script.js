@@ -15,6 +15,35 @@
 // FORMULARIO DE CONTACTO
 
 // NEWSLETTER
+function initNewsletter() {
+    const btn   = document.querySelector('.newsletter-btn');
+    const input = document.querySelector('.newsletter-input');
+    if (!btn || !input) return;
+
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        const email = input.value.trim();
+
+        if (!email || !validEmail(email)) {
+            showToast(
+                currentLanguage === 'es'
+                    ? 'Por favor, ingresa un email válido.'
+                    : 'Please enter a valid email address.',
+                'error'
+            );
+            return;
+        }
+
+        showToast(
+            currentLanguage === 'es'
+                ? '¡Gracias por suscribirte!'
+                : 'Thanks for subscribing!',
+            'success'
+        );
+        input.value = '';
+    });
+}
+
 
 // BOTONES DE PLANES
 

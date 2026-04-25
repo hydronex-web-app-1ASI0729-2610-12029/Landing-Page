@@ -14,6 +14,47 @@
 
 // FORMULARIO DE CONTACTO
 
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name    = this.querySelector('input[type="text"]')?.value.trim();
+        const email   = this.querySelector('input[type="email"]')?.value.trim();
+        const message = this.querySelector('textarea')?.value.trim();
+
+        if (!name || !email || !message) {
+            showToast(
+                currentLanguage === 'es'
+                    ? 'Por favor, completa todos los campos requeridos.'
+                    : 'Please fill in all required fields.',
+                'error'
+            );
+            return;
+        }
+
+        if (!validEmail(email)) {
+            showToast(
+                currentLanguage === 'es'
+                    ? 'Por favor, ingresa un email válido.'
+                    : 'Please enter a valid email address.',
+                'error'
+            );
+            return;
+        }
+
+        showToast(
+            currentLanguage === 'es'
+                ? '¡Mensaje enviado! Nos pondremos en contacto pronto.'
+                : 'Message sent! We will get back to you shortly.',
+            'success'
+        );
+        this.reset();
+    });
+}
+
 // NEWSLETTER
 
 // BOTONES DE PLANES

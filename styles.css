@@ -159,6 +159,148 @@ body.lang-es li[data-lang="en"] {
    NAVBAR
    =================================== */
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    padding: 8px 20px;
+    background: transparent;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 28px;
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .nav-container {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(41, 171, 226, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.brand-logo-img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gris-oscuro);
+    letter-spacing: -0.5px;
+}
+
+.highlight-brand {
+    color: var(--celeste);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-link {
+    color: var(--gris-oscuro);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--celeste);
+    background: rgba(41, 171, 226, 0.08);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 12px;
+}
+
+.btn-language {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 1.5px solid rgba(41, 171, 226, 0.4);
+    color: var(--gris-oscuro);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-language:hover {
+    background: var(--celeste-light);
+    border-color: var(--celeste);
+    color: var(--celeste);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 22px;
+    height: 2px;
+    background: var(--gris-oscuro);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* ===================================
    HERO
    =================================== */

@@ -61,7 +61,31 @@ function initMobileMenu() {
 }
 // SCROLL SUAVE
 
+function smoothScrollTo(selector) {
+    const target = document.querySelector(selector);
+    if (!target) return;
+    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+}
+
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function (e) {
+            e.preventDefault();
+            smoothScrollTo(this.getAttribute('href'));
+        });
+    });
+}
+
 // EFECTO NAVBAR AL HACER SCROLL
+
+function initNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+
+    window.addEventListener('scroll', throttle(() => {
+        navbar.classList.toggle('scrolled', window.pageYOffset > 80);
+    }, 16));
+}
 
 // ANIMACIONES FADE-IN AL HACER SCROLL
 
@@ -110,3 +134,19 @@ function throttle(fn, limit) {
 }
 
 // INICIALIZACIÓN
+
+document.addEventListener('DOMContentLoaded', () => {
+    initLanguageSystem();
+    initMobileMenu();
+    initSmoothScroll();
+    initNavbarScroll();
+    initScrollAnimations();
+    init3DCards();
+    initContactForm();
+    initNewsletter();
+    initPricingButtons();
+
+    document.body.classList.add('app-loaded');
+
+    console.log('%cTankIQ 🚰 — HydroTeam', 'color:#29ABE2; font-size:14px; font-weight:bold;');
+});

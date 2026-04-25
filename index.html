@@ -107,7 +107,65 @@
             </div>
           </div>
           <div class="contact-form-container">
-</div>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  data-placeholder-es="Ingresa tu nombre completo"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  data-placeholder-es="Ingresa tu correo electrónico"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  placeholder="Phone number"
+                  data-placeholder-es="Número de teléfono"
+                />
+              </div>
+              <div class="form-group">
+                <select data-placeholder-es="¿Cuál es tu rol?">
+                  <option value="" disabled selected>
+                    <span data-lang="en">What is your role?</span>
+                    <span data-lang="es">¿Cuál es tu rol?</span>
+                  </option>
+                  <option value="admin">
+                    <span data-lang="en">Building administrator</span>
+                    <span data-lang="es">Administrador de edificio</span>
+                  </option>
+                  <option value="owner">
+                    <span data-lang="en">Owner / Resident</span>
+                    <span data-lang="es">Propietario / Inquilino</span>
+                  </option>
+                  <option value="other">
+                    <span data-lang="en">Other</span>
+                    <span data-lang="es">Otro</span>
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="Tell us about your building..."
+                  data-placeholder-es="Cuéntanos sobre tu edificio..."
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane"></i>
+                <span data-lang="en">Send Message</span>
+                <span data-lang="es">Enviar Mensaje</span>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

@@ -1,161 +1,242 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TankIQ - Real-time water monitoring for residential buildings</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TankIQ - Real-time water monitoring for residential buildings</title>
 
-    <!-- SEO -->
-    <meta
-      name="description"
-      content="IoT platform that monitors water levels in real time for residential buildings in Lima. Avoid running out of water and optimize cistern refills."
-    />
-    <meta
-      name="keywords"
-      content="cistern monitoring, IoT, water level, Lima, buildings, SEDAPAL, TankIQ, HydroTeam"
-    />
-    <meta name="author" content="HydroTeam" />
+  <!-- SEO -->
+  <meta name="description" content="IoT platform that monitors water levels in real time for residential buildings in Lima. Avoid running out of water and optimize cistern refills.">
+  <meta name="keywords" content="cistern monitoring, IoT, water level, Lima, buildings, SEDAPAL, TankIQ, HydroTeam">
+  <meta name="author" content="HydroTeam">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- NAVBAR  -->
-<nav class="navbar" id="navbar">
-  <div class="nav-container">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-    <div class="nav-brand">
-      <img src="images/TankIQ-logo.png" alt="TankIQ logo" class="brand-logo-img">
-      <span class="brand-name">Tank<span class="highlight-brand">IQ</span></span>
-    </div>
+  <!-- ================================ -->
+  <!-- NAVBAR                           -->
+  <!-- ================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
 
-    <div class="nav-menu" id="navMenu">
-      <a href="#inicio" class="nav-link">
-        <span data-lang="en">Home</span>
-        <span data-lang="es">Inicio</span>
-      </a>
-      <a href="#problema" class="nav-link">
-        <span data-lang="en">The Problem</span>
-        <span data-lang="es">El Problema</span>
-      </a>
-      <a href="#como-funciona" class="nav-link">
-        <span data-lang="en">How it works</span>
-        <span data-lang="es">Cómo funciona</span>
-      </a>
-      <a href="#beneficios" class="nav-link">
-        <span data-lang="en">Benefits</span>
-        <span data-lang="es">Beneficios</span>
-      </a>
-      <a href="#planes" class="nav-link">
-        <span data-lang="en">Plans</span>
-        <span data-lang="es">Planes</span>
-      </a>
-      <a href="#contacto" class="nav-link">
-        <span data-lang="en">Contact</span>
-        <span data-lang="es">Contacto</span>
-      </a>
+      <div class="nav-brand">
+        <img src="images/TankIQ-logo.png" alt="TankIQ logo" class="brand-logo-img">
+        <span class="brand-name">Tank<span class="highlight-brand">IQ</span></span>
+      </div>
 
-      <div class="nav-actions">
-        <div class="language-switcher">
-          <button id="languageBtn" class="btn-language">
-            <i class="fas fa-globe"></i>
-            <span data-lang="en">EN</span>
-            <span data-lang="es">ES</span>
-          </button>
-        </div>
-        <a href="#contacto" class="btn btn-primary">
-          <span data-lang="en">Get started</span>
-          <span data-lang="es">Comenzar</span>
+      <div class="nav-menu" id="navMenu">
+        <a href="#inicio" class="nav-link">
+          <span data-lang="en">Home</span>
+          <span data-lang="es">Inicio</span>
         </a>
-      </div>
-    </div>
-
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-  </div>
-</nav>
-    <!-- HERO  -->
-<section id="inicio" class="hero">
-  <div class="hero-content">
-
-    <div class="hero-text">
-      <div class="hero-chip">
-        <span class="chip-dot"></span>
-        <span data-lang="en">For residential buildings in Lima</span>
-        <span data-lang="es">Para edificios residenciales en Lima</span>
-      </div>
-
-      <h1 class="hero-title">
-        <span data-lang="en">Know exactly how much water your building has,
-          <span class="highlight">right now.</span></span>
-        <span data-lang="es">Sabe exactamente cuánta agua tiene tu edificio,
-          <span class="highlight">ahora.</span></span>
-      </h1>
-
-      <p class="hero-description">
-        <span data-lang="en">TankIQ connects an IoT sensor to your cistern and alerts you in
-          real time how much water you have and when to request a refill. Forget about water
-          shortages and unnecessary tanker trucks.</span>
-        <span data-lang="es">TankIQ conecta un sensor IoT a tu cisterna y te avisa en tiempo
-          real cuánta agua tienes y cuándo pedir recarga. Olvídate del desabastecimiento y
-          los camiones innecesarios.</span>
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#contacto" class="btn btn-primary btn-large">
-          <i class="fas fa-building"></i>
-          <span data-lang="en">I am an administrator</span>
-          <span data-lang="es">Soy administrador</span>
+        <a href="#problema" class="nav-link">
+          <span data-lang="en">The Problem</span>
+          <span data-lang="es">El Problema</span>
         </a>
-        <a href="#contacto" class="btn btn-secondary btn-large">
-          <i class="fas fa-home"></i>
-          <span data-lang="en">I am a resident</span>
-          <span data-lang="es">Soy propietario</span>
+        <a href="#como-funciona" class="nav-link">
+          <span data-lang="en">How it works</span>
+          <span data-lang="es">Cómo funciona</span>
         </a>
+        <a href="#beneficios" class="nav-link">
+          <span data-lang="en">Benefits</span>
+          <span data-lang="es">Beneficios</span>
+        </a>
+        <a href="#planes" class="nav-link">
+          <span data-lang="en">Plans</span>
+          <span data-lang="es">Planes</span>
+        </a>
+        <a href="#contacto" class="nav-link">
+          <span data-lang="en">Contact</span>
+          <span data-lang="es">Contacto</span>
+        </a>
+
+        <div class="nav-actions">
+          <div class="language-switcher">
+            <button id="languageBtn" class="btn-language">
+              <i class="fas fa-globe"></i>
+              <span data-lang="en">EN</span>
+              <span data-lang="es">ES</span>
+            </button>
+          </div>
+          <a href="#contacto" class="btn btn-primary">
+            <span data-lang="en">Get started</span>
+            <span data-lang="es">Comenzar</span>
+          </a>
+        </div>
       </div>
 
-      <div class="hero-trust">
-        <div class="trust-item">
-          <i class="fas fa-check-circle"></i>
-          <span data-lang="en">No complex installation</span>
-          <span data-lang="es">Sin instalación compleja</span>
-        </div>
-        <div class="trust-item">
-          <i class="fas fa-check-circle"></i>
-          <span data-lang="en">Real-time alerts</span>
-          <span data-lang="es">Alertas en tiempo real</span>
-        </div>
-        <div class="trust-item">
-          <i class="fas fa-check-circle"></i>
-          <span data-lang="en">Lima Metropolitana</span>
-          <span data-lang="es">Lima Metropolitana</span>
-        </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+
     </div>
+  </nav>
 
-  </div>
-</section>
-    <!-- PROBLEMA -->
+  <!-- ================================ -->
+  <!-- HERO                             -->
+  <!-- ================================ -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
 
-    <section id="problema" class="problema">
+      <div class="hero-text">
+        <div class="hero-chip">
+          <span class="chip-dot"></span>
+          <span data-lang="en">For residential buildings in Lima</span>
+          <span data-lang="es">Para edificios residenciales en Lima</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span data-lang="en">Know exactly how much water your building has, <span class="highlight">right now.</span></span>
+          <span data-lang="es">Sabe exactamente cuánta agua tiene tu edificio, <span class="highlight">ahora.</span></span>
+        </h1>
+
+        <p class="hero-description">
+          <span data-lang="en">TankIQ connects an IoT sensor to your cistern and alerts you in real time how much water you have and when to request a refill. Forget about water shortages and unnecessary tanker trucks.</span>
+          <span data-lang="es">TankIQ conecta un sensor IoT a tu cisterna y te avisa en tiempo real cuánta agua tienes y cuándo pedir recarga. Olvídate del desabastecimiento y los camiones innecesarios.</span>
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn btn-primary btn-large">
+            <i class="fas fa-building"></i>
+            <span data-lang="en">I am an administrator</span>
+            <span data-lang="es">Soy administrador</span>
+          </a>
+          <a href="#contacto" class="btn btn-secondary btn-large">
+            <i class="fas fa-home"></i>
+            <span data-lang="en">I am a resident</span>
+            <span data-lang="es">Soy propietario</span>
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            <span data-lang="en">No complex installation</span>
+            <span data-lang="es">Sin instalación compleja</span>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            <span data-lang="en">Real-time alerts</span>
+            <span data-lang="es">Alertas en tiempo real</span>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            <span data-lang="en">Lima Metropolitana</span>
+            <span data-lang="es">Lima Metropolitana</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-dashboard">
+        <div class="dashboard-card">
+          <div class="dashboard-topbar">
+            <div class="topbar-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="topbar-url">app.tankiq.pe/dashboard</div>
+          </div>
+          <div class="dashboard-body">
+            <div class="db-header">
+              <span class="db-building">
+                <span data-lang="en">Building Los Pinos – SJL</span>
+                <span data-lang="es">Edificio Los Pinos – SJL</span>
+              </span>
+              <span class="db-status">
+                <span class="status-dot"></span>
+                <span data-lang="en">Online</span>
+                <span data-lang="es">En línea</span>
+              </span>
+            </div>
+            <div class="db-stats">
+              <div class="db-stat-card">
+                <div class="stat-label">
+                  <span data-lang="en">Current level</span>
+                  <span data-lang="es">Nivel actual</span>
+                </div>
+                <div class="stat-value green">72%</div>
+                <div class="stat-sub">3,600 L</div>
+              </div>
+              <div class="db-stat-card">
+                <div class="stat-label">
+                  <span data-lang="en">Estimated days</span>
+                  <span data-lang="es">Días estimados</span>
+                </div>
+                <div class="stat-value blue">
+                  <span data-lang="en">8 days</span>
+                  <span data-lang="es">8 días</span>
+                </div>
+                <div class="stat-sub">450 L/day</div>
+              </div>
+              <div class="db-stat-card">
+                <div class="stat-label">
+                  <span data-lang="en">Last refill</span>
+                  <span data-lang="es">Última recarga</span>
+                </div>
+                <div class="stat-value">Apr 12</div>
+                <div class="stat-sub">S/. 95</div>
+              </div>
+            </div>
+            <div class="db-gauge-row">
+              <div class="db-gauge">
+                <svg width="80" height="80" viewBox="0 0 80 80">
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="#e8e8e8" stroke-width="8"/>
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="#43A047" stroke-width="8"
+                    stroke-dasharray="143 58" stroke-linecap="round" transform="rotate(-90 40 40)"/>
+                </svg>
+                <div class="gauge-label">
+                  <span class="gauge-pct">72%</span>
+                  <span class="gauge-text">
+                    <span data-lang="en">LEVEL</span>
+                    <span data-lang="es">NIVEL</span>
+                  </span>
+                </div>
+              </div>
+              <div class="db-chart">
+                <div class="chart-title">
+                  <span data-lang="en">Daily consumption (L)</span>
+                  <span data-lang="es">Consumo diario (L)</span>
+                </div>
+                <div class="chart-bars">
+                  <div class="chart-bar" style="height:60%"></div>
+                  <div class="chart-bar active" style="height:85%"></div>
+                  <div class="chart-bar" style="height:68%"></div>
+                  <div class="chart-bar" style="height:52%"></div>
+                  <div class="chart-bar active" style="height:92%"></div>
+                  <div class="chart-bar" style="height:64%"></div>
+                  <div class="chart-bar" style="height:75%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="db-alert">
+              <i class="fas fa-bell"></i>
+              <span data-lang="en">Unusual consumption detected on Monday</span>
+              <span data-lang="es">Consumo inusual detectado el lunes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- PROBLEMA                         -->
+  <!-- ================================ -->
+  <section id="problema" class="problema">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">
@@ -218,9 +299,10 @@
     </div>
   </section>
 
-    <!-- COMO FUNCIONA  -->
-
-    <section id="como-funciona" class="como-funciona">
+  <!-- ================================ -->
+  <!-- COMO FUNCIONA                    -->
+  <!-- ================================ -->
+  <section id="como-funciona" class="como-funciona">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">
@@ -286,8 +368,10 @@
     </div>
   </section>
 
-    <!-- BENEFICIOS  -->
-<section id="beneficios" class="beneficios">
+  <!-- ================================ -->
+  <!-- BENEFICIOS                       -->
+  <!-- ================================ -->
+  <section id="beneficios" class="beneficios">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">
@@ -416,8 +500,10 @@
     </div>
   </section>
 
-    <!-- AHORRO  -->
-<section id="ahorro" class="ahorro">
+  <!-- ================================ -->
+  <!-- AHORRO                           -->
+  <!-- ================================ -->
+  <section id="ahorro" class="ahorro">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow eyebrow-light">
@@ -471,9 +557,10 @@
     </div>
   </section>
 
-    <!-- PLANES  -->
-
-      <section id="planes" class="planes">
+  <!-- ================================ -->
+  <!-- PLANES                           -->
+  <!-- ================================ -->
+  <section id="planes" class="planes">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">
@@ -581,9 +668,8 @@
   </section>
 
 
-    <!--  INTEGRANTES -->
-
-    <section id="equipo" class="team">
+  <!--  Integrantes -->
+<section id="equipo" class="team">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">
@@ -680,7 +766,8 @@
           </p>
         </div>
       </div>
-       <!-- Gabriel -->
+
+      <!-- Gabriel -->
       <div class="team-card">
         <div class="team-image">
           <img src="images/Integrante_Gabriel.png" alt="Gabriel Ferran Espinar">
@@ -702,248 +789,219 @@
       </div>
 
 
+      
+    </div>
+  </div>
+</section>
 
+  <!-- ================================ -->
+  <!-- CONTACTO                         -->
+  <!-- ================================ -->
+  <section id="contacto" class="contacto">
+    <div class="container">
+      <div class="contact-content">
 
-    <!-- CONTACTO  -->
-
-    <section id="contacto" class="contacto">
-      <div class="container">
-        <div class="contact-content">
-          <div class="contact-info">
-            <h2>
-              <span data-lang="en"
-                >Connect with us and discover how to manage your building's
-                water intelligently.</span
-              >
-              <span data-lang="es"
-                >Conéctate con nosotros y descubre cómo gestionar el agua de tu
-                edificio de forma inteligente.</span
-              >
-            </h2>
-            <p>
-              <span data-lang="en"
-                >We are here to help you implement the best IoT monitoring
-                solution for your building in Lima.</span
-              >
-              <span data-lang="es"
-                >Estamos aquí para ayudarte a implementar la mejor solución de
-                monitoreo IoT para tu edificio en Lima.</span
-              >
-            </p>
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p>contacto@hydroteam.pe</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <div>
-                  <h4>
-                    <span data-lang="en">Phone</span>
-                    <span data-lang="es">Teléfono</span>
-                  </h4>
-                  <p>+51 919 123 456</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <h4>
-                    <span data-lang="en">Location</span>
-                    <span data-lang="es">Ubicación</span>
-                  </h4>
-                  <p>Lima, Perú</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="contact-form-container">
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
-                <input
-                  type="text"
-                  placeholder="Enter your full name"
-                  data-placeholder-es="Ingresa tu nombre completo"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  data-placeholder-es="Ingresa tu correo electrónico"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="tel"
-                  placeholder="Phone number"
-                  data-placeholder-es="Número de teléfono"
-                />
-              </div>
-              <div class="form-group">
-                <select data-placeholder-es="¿Cuál es tu rol?">
-                  <option value="" disabled selected>
-                    <span data-lang="en">What is your role?</span>
-                    <span data-lang="es">¿Cuál es tu rol?</span>
-                  </option>
-                  <option value="admin">
-                    <span data-lang="en">Building administrator</span>
-                    <span data-lang="es">Administrador de edificio</span>
-                  </option>
-                  <option value="owner">
-                    <span data-lang="en">Owner / Resident</span>
-                    <span data-lang="es">Propietario / Inquilino</span>
-                  </option>
-                  <option value="other">
-                    <span data-lang="en">Other</span>
-                    <span data-lang="es">Otro</span>
-                  </option>
-                </select>
-              </div>
-              <div class="form-group">
-                <textarea
-                  placeholder="Tell us about your building..."
-                  data-placeholder-es="Cuéntanos sobre tu edificio..."
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full">
-                <i class="fas fa-paper-plane"></i>
-                <span data-lang="en">Send Message</span>
-                <span data-lang="es">Enviar Mensaje</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER-->
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <div class="footer-logo">
-              <img
-                src="images/TankIQ-logo.png"
-                alt="TankIQ logo"
-                class="footer-logo-img"
-              />
-              <span class="footer-logo-name"
-                >Tank<span class="highlight-brand">IQ</span></span
-              >
-            </div>
-            <p>
-              <span data-lang="en"
-                >IoT platform for intelligent cistern monitoring in residential
-                buildings in Lima Metropolitana.</span
-              >
-              <span data-lang="es"
-                >Plataforma IoT para el monitoreo inteligente de cisternas en
-                edificios residenciales de Lima Metropolitana.</span
-              >
-            </p>
-            <div class="newsletter">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                data-placeholder-es="tu@email.com"
-                class="newsletter-input"
-              />
-              <button type="button" class="btn btn-primary newsletter-btn">
-                <span data-lang="en">Subscribe</span>
-                <span data-lang="es">Suscribirse</span>
-              </button>
-            </div>
-          </div>
-          <div class="footer-links">
-            <div class="footer-section">
-              <h4>
-                <span data-lang="en">Navigation</span>
-                <span data-lang="es">Navegación</span>
-              </h4>
-              <a href="#inicio">
-                <span data-lang="en">Home</span>
-                <span data-lang="es">Inicio</span>
-              </a>
-              <a href="#problema">
-                <span data-lang="en">The Problem</span>
-                <span data-lang="es">El Problema</span>
-              </a>
-              <a href="#como-funciona">
-                <span data-lang="en">How it works</span>
-                <span data-lang="es">Cómo funciona</span>
-              </a>
-              <a href="#beneficios">
-                <span data-lang="en">Benefits</span>
-                <span data-lang="es">Beneficios</span>
-              </a>
-              <a href="#planes">
-                <span data-lang="en">Plans</span>
-                <span data-lang="es">Planes</span>
-              </a>
-            </div>
-
-            <div class="footer-section">
-              <h4>
-                <span data-lang="en">Legal</span>
-                <span data-lang="es">Legal</span>
-              </h4>
-              <a href="#">
-                <span data-lang="en">Terms and Conditions</span>
-                <span data-lang="es">Términos y Condiciones</span>
-              </a>
-              <a href="#">
-                <span data-lang="en">Privacy Policy</span>
-                <span data-lang="es">Política de Privacidad</span>
-              </a>
-              <a href="#">
-                <span data-lang="en">Cookie Policy</span>
-                <span data-lang="es">Política de Cookies</span>
-              </a>
-            </div>
-            <div class="footer-section">
-              <h4>
-                <span data-lang="en">Contact</span>
-                <span data-lang="es">Contacto</span>
-              </h4>
-              <a href="mailto:contacto@hydroteam.pe">contacto@hydroteam.pe</a>
-              <a href="tel:+51919123456">+51 919 123 456</a>
-              <a href="#">Lima, Perú</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
+        <div class="contact-info">
+          <h2>
+            <span data-lang="en">Connect with us and discover how to manage your building's water intelligently.</span>
+            <span data-lang="es">Conéctate con nosotros y descubre cómo gestionar el agua de tu edificio de forma inteligente.</span>
+          </h2>
           <p>
-            <span data-lang="en"
-              >&copy; 2026 HydroTeam. All Rights Reserved</span
-            >
-            <span data-lang="es"
-              >&copy; 2026 HydroTeam. Todos los Derechos Reservados</span
-            >
+            <span data-lang="en">We are here to help you implement the best IoT monitoring solution for your building in Lima.</span>
+            <span data-lang="es">Estamos aquí para ayudarte a implementar la mejor solución de monitoreo IoT para tu edificio en Lima.</span>
           </p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a href="#" aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" aria-label="LinkedIn"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>contacto@hydroteam.pe</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>
+                  <span data-lang="en">Phone</span>
+                  <span data-lang="es">Teléfono</span>
+                </h4>
+                <p>+51 919 123 456</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>
+                  <span data-lang="en">Location</span>
+                  <span data-lang="es">Ubicación</span>
+                </h4>
+                <p>Lima, Perú</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div class="contact-form-container">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text"
+                placeholder="Enter your full name"
+                data-placeholder-es="Ingresa tu nombre completo"
+                required>
+            </div>
+            <div class="form-group">
+              <input type="email"
+                placeholder="Enter your email"
+                data-placeholder-es="Ingresa tu correo electrónico"
+                required>
+            </div>
+            <div class="form-group">
+              <input type="tel"
+                placeholder="Phone number"
+                data-placeholder-es="Número de teléfono">
+            </div>
+            <div class="form-group">
+              <select data-placeholder-es="¿Cuál es tu rol?">
+                <option value="" disabled selected>
+                  <span data-lang="en">What is your role?</span>
+                  <span data-lang="es">¿Cuál es tu rol?</span>
+                </option>
+                <option value="admin">
+                  <span data-lang="en">Building administrator</span>
+                  <span data-lang="es">Administrador de edificio</span>
+                </option>
+                <option value="owner">
+                  <span data-lang="en">Owner / Resident</span>
+                  <span data-lang="es">Propietario / Inquilino</span>
+                </option>
+                <option value="other">
+                  <span data-lang="en">Other</span>
+                  <span data-lang="es">Otro</span>
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea
+                placeholder="Tell us about your building..."
+                data-placeholder-es="Cuéntanos sobre tu edificio..."
+                rows="5"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i>
+              <span data-lang="en">Send Message</span>
+              <span data-lang="es">Enviar Mensaje</span>
+            </button>
+          </form>
+        </div>
+
       </div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- FOOTER                           -->
+  <!-- ================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/TankIQ-logo.png" alt="TankIQ logo" class="footer-logo-img">
+            <span class="footer-logo-name">Tank<span class="highlight-brand">IQ</span></span>
+          </div>
+          <p>
+            <span data-lang="en">IoT platform for intelligent cistern monitoring in residential buildings in Lima Metropolitana.</span>
+            <span data-lang="es">Plataforma IoT para el monitoreo inteligente de cisternas en edificios residenciales de Lima Metropolitana.</span>
+          </p>
+          <div class="newsletter">
+            <input type="email"
+              placeholder="your@email.com"
+              data-placeholder-es="tu@email.com"
+              class="newsletter-input">
+            <button type="button" class="btn btn-primary newsletter-btn">
+              <span data-lang="en">Subscribe</span>
+              <span data-lang="es">Suscribirse</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>
+              <span data-lang="en">Navigation</span>
+              <span data-lang="es">Navegación</span>
+            </h4>
+            <a href="#inicio">
+              <span data-lang="en">Home</span>
+              <span data-lang="es">Inicio</span>
+            </a>
+            <a href="#problema">
+              <span data-lang="en">The Problem</span>
+              <span data-lang="es">El Problema</span>
+            </a>
+            <a href="#como-funciona">
+              <span data-lang="en">How it works</span>
+              <span data-lang="es">Cómo funciona</span>
+            </a>
+            <a href="#beneficios">
+              <span data-lang="en">Benefits</span>
+              <span data-lang="es">Beneficios</span>
+            </a>
+            <a href="#planes">
+              <span data-lang="en">Plans</span>
+              <span data-lang="es">Planes</span>
+            </a>
+          </div>
+          <div class="footer-section">
+            <h4>
+              <span data-lang="en">Legal</span>
+              <span data-lang="es">Legal</span>
+            </h4>
+            <a href="#">
+              <span data-lang="en">Terms and Conditions</span>
+              <span data-lang="es">Términos y Condiciones</span>
+            </a>
+            <a href="#">
+              <span data-lang="en">Privacy Policy</span>
+              <span data-lang="es">Política de Privacidad</span>
+            </a>
+            <a href="#">
+              <span data-lang="en">Cookie Policy</span>
+              <span data-lang="es">Política de Cookies</span>
+            </a>
+          </div>
+          <div class="footer-section">
+            <h4>
+              <span data-lang="en">Contact</span>
+              <span data-lang="es">Contacto</span>
+            </h4>
+            <a href="mailto:contacto@hydroteam.pe">contacto@hydroteam.pe</a>
+            <a href="tel:+51919123456">+51 919 123 456</a>
+            <a href="#">Lima, Perú</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          <span data-lang="en">&copy; 2026 HydroTeam. All Rights Reserved</span>
+          <span data-lang="es">&copy; 2026 HydroTeam. Todos los Derechos Reservados</span>
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

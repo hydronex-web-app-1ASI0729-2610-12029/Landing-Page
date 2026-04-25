@@ -18,6 +18,24 @@
 
 // BOTONES DE PLANES
 
+function initPricingButtons() {
+    document.querySelectorAll('.plan-btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+            const href = btn.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                smoothScrollTo(href);
+                showToast(
+                    currentLanguage === 'es'
+                        ? '¡Perfecto! Cuéntanos sobre tu edificio.'
+                        : 'Great! Tell us about your building.',
+                    'success'
+                );
+            }
+        });
+    });
+}
+
 // TOAST NOTIFICATIONS
 
 function showToast(message, type = "info") {

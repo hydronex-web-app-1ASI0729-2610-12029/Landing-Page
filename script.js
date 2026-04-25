@@ -56,6 +56,21 @@ function showToast(message, type = 'info') {
 
 // UTILIDADES
 
+function validEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function throttle(fn, limit) {
+    let inThrottle;
+    return function (...args) {
+        if (!inThrottle) {
+            fn.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
 
 
 // INICIALIZACIÓN
